@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singaway | Under Maintenance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      position:relative;
+      color:#111;
+    }
+
+    body::before{
+      content:"";
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:rgba(255, 196, 0, 0.15);
+      filter:blur(120px);
+      border-radius:50%;
+      top:-100px;
+      right:-100px;
+    }
+
+    body::after{
+      content:"";
+      position:absolute;
+      width:400px;
+      height:400px;
+      background:rgba(255, 94, 94, 0.12);
+      filter:blur(120px);
+      border-radius:50%;
+      bottom:-100px;
+      left:-100px;
+    }
+
+    .container{
+      width:90%;
+      max-width:700px;
+      background:rgba(255,255,255,0.7);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:32px;
+      padding:50px 40px;
+      text-align:center;
+      position:relative;
+      z-index:10;
+      box-shadow:
+      0 10px 40px rgba(0,0,0,0.08);
+      animation:fadeUp 1s ease;
+    }
+
+    .logo{
+      width:180px;
+      height:180px;
+      object-fit:contain;
+      margin-bottom:30px;
+      animation:float 4s ease-in-out infinite;
+      border:2px solid #111;
+      border-radius:50%;
+    }
+
+    h1{
+      font-size:52px;
+      line-height:1.1;
+      font-weight:700;
+      margin-bottom:20px;
+      letter-spacing:-2px;
+    }
+
+    p{
+      font-size:18px;
+      color:#555;
+      line-height:1.7;
+      max-width:550px;
+      margin:auto;
+      margin-bottom:35px;
+    }
+
+    .email-box{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:16px 28px;
+      border-radius:999px;
+      background:#111;
+      color:white;
+      font-weight:500;
+      text-decoration:none;
+      transition:0.3s ease;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .email-box:hover{
+      transform:translateY(-3px);
+    }
+
+    .small{
+      margin-top:30px;
+      font-size:14px;
+      color:#888;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .container{
+        padding:40px 25px;
+      }
+
+      .logo{
+        width:140px;
+        height:140px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      p{
+        font-size:16px;
+      }
+
+      .email-box{
+        width:100%;
+        font-size:14px;
+        padding:15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Replace logo.png with your uploaded logo -->
+    <img src="./public/logo.jpeg" alt="Singaway Logo" class="logo">
+
+    <h1>Website Under Maintenance</h1>
+
+    <p>
+      Singaway Trade & Test Centre Pvt. Ltd. is currently upgrading the website
+      to serve you better with Singapore jobs, work permits, and study visa services.
+    </p>
+
+    <a href="mailto:singawaycareer@gmail.com" class="email-box">
+      singawaycareer@gmail.com
+    </a>
+
+    <div class="small">
+      © 2026 Singaway Trade & Test Centre Pvt. Ltd.
+    </div>
+
+  </div>
+
+</body>
+</html>
